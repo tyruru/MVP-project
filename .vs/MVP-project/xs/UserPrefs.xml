@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{E2371FD7-DE7A-5D3F-3975-1EC5F81E8AB8}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs">
+    <Files>
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" Line="11" Column="6" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="21" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Command/ICommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/IAsyncCommand.cs" Line="17" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/INoResponseAsyncCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Command/INoResponseCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Presenter/IPresenter.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Presenter/MonoPresenter.cs" />
+      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealth/PlayerHealthView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealth/PlayerHealthModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" Line="17" Column="83" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthModel.cs" Line="17" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerModel.cs" Line="9" Column="31" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" Line="18" Column="9" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerView.cs" Line="13" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" Line="14" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" Line="18" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" Line="8" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MVP-project" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Project" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="Framework" expanded="True">
+                    <Node name="AsyncCommand" expanded="True" />
+                    <Node name="Command" expanded="True" />
+                    <Node name="Presenter" expanded="True" />
+                    <Node name="Unity" expanded="True">
+                      <Node name="Command" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="Game" expanded="True">
+                    <Node name="Health" expanded="True" />
+                    <Node name="Player" expanded="True">
+                      <Node name="Behaviour" expanded="True">
+                        <Node name="PlayerWalk.cs" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fe173a0f-631d-421d-bb87-150d4b70597f" />
+</Properties>
