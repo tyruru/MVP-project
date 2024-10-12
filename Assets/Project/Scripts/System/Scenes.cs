@@ -12,6 +12,9 @@ public static class Scenes
     {
         public const string MainMenu = "MainMenu";
         public const string LoadMenu = "LoadMenu";
+        public const string SettingsMenu = "SettingsMenu";
         public const string Level = "Level";
+        public const string RebindMenu = "RebindMenu";
+        public const string AudioMenu = "AudioMenu";
     }
 }

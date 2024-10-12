@@ -12,6 +12,7 @@ public abstract class AbstractBehaviour : MonoBehaviour
 
     protected virtual void Awake()
     {
+        // Изменить на взятие с модели??
         _body2D = GetComponentInParent<Rigidbody2D>();
         Assert.IsNotNull(_body2D, "[Body2d] is missed");
         _playerInput = GetComponentInParent<PlayerInput>();
