@@ -7,16 +7,16 @@ public abstract class AbstractBehaviour : MonoBehaviour
 {
     protected Rigidbody2D _body2D;
     protected PlayerInput _playerInput;
-
-    [Inject] protected PlayerModel _model;
+    protected CollisionState _collisionState;
 
     protected virtual void Awake()
     {
-        // Изменить на взятие с модели??
         _body2D = GetComponentInParent<Rigidbody2D>();
         Assert.IsNotNull(_body2D, "[Body2d] is missed");
         _playerInput = GetComponentInParent<PlayerInput>();
         Assert.IsNotNull(_playerInput, "Player input is null");
+        _collisionState = GetComponentInParent<CollisionState>();
+        Assert.IsNotNull(_playerInput, "Collision state is null");
     }
 
 
