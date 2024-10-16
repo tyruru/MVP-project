@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-public class PlayerJump : AbstractBehaviour
+public class TestJump : AbstractBehaviour
 {
     [SerializeField] private float _jumpTime = 0.6f;
     [SerializeField] private float _jumpSpeed = 10f;
@@ -30,7 +29,7 @@ public class PlayerJump : AbstractBehaviour
     private void Update()
     {
         // Если приземлились
-        if (_collisionState.IsStanding)
+        if(_collisionState.IsStanding)
         {
             IsFullJump = false;
             IsJumping = false;
@@ -49,7 +48,7 @@ public class PlayerJump : AbstractBehaviour
         // Button up
         if (_jumpAction.ReadValue<float>() == 0)
             IsJumping = false;
-
+        
         if (!IsJumping || IsFullJump)
         {
             // Резкая остановка прыжка

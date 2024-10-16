@@ -8,6 +8,7 @@ public class PlayerWalk : AbstractBehaviour
     [SerializeField] private float _speed = 4f;
 
     private InputAction _moveAction;
+    private float velX;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class PlayerWalk : AbstractBehaviour
 
     void Update()
     {
-        float velX = _moveAction.ReadValue<float>() * _speed;
+         velX = _moveAction.ReadValue<float>() * _speed;
 
         _body2D.velocity = new Vector2(velX, _body2D.velocity.y);
     }

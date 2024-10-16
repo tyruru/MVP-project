@@ -1,28 +1,36 @@
 ﻿<Properties StartupConfiguration="{E2371FD7-DE7A-5D3F-3975-1EC5F81E8AB8}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6044e888-9ca9-45d0-8128-eea129715d72" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs">
     <Files>
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" Line="11" Column="6" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="21" Column="1" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="13" Column="44" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Framework/Command/ICommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/IAsyncCommand.cs" Line="17" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/IAsyncCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/INoResponseAsyncCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Command/INoResponseCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Presenter/IPresenter.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Presenter/MonoPresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealth/PlayerHealthView.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealth/PlayerHealthModel.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" Line="17" Column="83" />
       <File FileName="Assets/Project/Scripts/Game/Health/HealthModel.cs" Line="17" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerModel.cs" Line="9" Column="31" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" Line="18" Column="9" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerView.cs" Line="13" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" Line="14" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" Line="18" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" Line="8" Column="5" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" Line="11" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" Line="33" Column="30" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" Line="10" Column="13" />
+      <File FileName="Assets/Project/Scripts/Scene/RebindManagerEditor.cs" Line="38" Column="34" />
+      <File FileName="Assets/Project/Scripts/Scene/RebindManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/System/Scenes.cs" Line="21" Column="1" />
+      <File FileName="Assets/Project/Scripts/Menu/OpenSceneWithoutLoadingScreen.cs" Line="47" Column="6" />
+      <File FileName="Assets/Project/Scripts/System/BootstrapController.cs" Line="17" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Collision/CollisionState.cs" Line="5" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -40,24 +48,26 @@
                     </Node>
                   </Node>
                   <Node name="Game" expanded="True">
+                    <Node name="Collision" expanded="True" />
                     <Node name="Health" expanded="True" />
                     <Node name="Player" expanded="True">
-                      <Node name="Behaviour" expanded="True">
-                        <Node name="PlayerWalk.cs" selected="True" />
-                      </Node>
+                      <Node name="Behaviour" expanded="True" />
                     </Node>
                   </Node>
+                  <Node name="Menu" expanded="True">
+                    <Node name="RebindMenu" expanded="True" />
+                  </Node>
+                  <Node name="System" expanded="True" />
                 </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__" />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fe173a0f-631d-421d-bb87-150d4b70597f" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
