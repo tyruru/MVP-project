@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using System.Reflection;
 using System;
 using UnityEditor.U2D.Path;
+using DG.Tweening;
 
 public class OpenSceneWithoutLoadingScreen : ButtonCommand
 {
@@ -47,6 +48,7 @@ public class OpenSceneWithoutLoadingScreen : ButtonCommand
     {
         base.OnDestroy();
         Complete();
+        DOTween.KillAll();
     }
 }
 

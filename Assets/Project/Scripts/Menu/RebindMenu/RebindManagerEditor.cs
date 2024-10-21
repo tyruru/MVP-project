@@ -13,9 +13,9 @@ public class RebindManagerEditor : Editor
         RebindManager rebindManager = (RebindManager)target;
 
         // Проверка, инициализирована ли привязка
-        if (rebindManager.bindingToRebind.actionReference != null)
+        if (rebindManager.currentBinding.actionReference != null)
         {
-            var action = rebindManager.bindingToRebind.actionReference.action;
+            var action = rebindManager.currentBinding.actionReference.action;
 
             if (action != null)
             {
@@ -29,12 +29,12 @@ public class RebindManagerEditor : Editor
                 }
 
                 // Выпадающий список для выбора индекса
-                int selectedIndex = EditorGUILayout.Popup("Select Binding", rebindManager.bindingToRebind.bindingIndex, bindingNames);
+                int selectedIndex = EditorGUILayout.Popup("Select Binding", rebindManager.currentBinding.bindingIndex, bindingNames);
 
                 // Обновляем выбранный индекс
-                if (selectedIndex != rebindManager.bindingToRebind.bindingIndex)
+                if (selectedIndex != rebindManager.currentBinding.bindingIndex)
                 {
-                    rebindManager.bindingToRebind.bindingIndex = selectedIndex;
+                    rebindManager.currentBinding.bindingIndex = selectedIndex;
                     EditorUtility.SetDirty(rebindManager);
                 }
             }
