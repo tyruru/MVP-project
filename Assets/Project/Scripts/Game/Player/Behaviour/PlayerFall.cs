@@ -11,6 +11,8 @@ public class PlayerFall : AbstractBehaviour
     private Vector2 _vecGravity;
     private PlayerJump _testJump;
 
+    public bool IsFall;
+
     private void Start()
     {
         _vecGravity = new Vector2(0, -Physics.gravity.y);
@@ -21,7 +23,12 @@ public class PlayerFall : AbstractBehaviour
     private void Update()
     {
         if (_body2D.velocity.y < 0)
+        {
             OnFall();
+            IsFall = true;
+        }
+        else
+            IsFall = false;
 
         if (_testJump.IsFullJump)
             _currentFallMultiplier = Time.deltaTime + _fallSmooth;
