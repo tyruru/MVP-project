@@ -10,6 +10,8 @@ public class PlayerWalk : AbstractBehaviour
     private InputAction _moveAction;
     private float velX;
 
+    public bool IsWalk;
+
     void Start()
     {
         _moveAction = _playerInput.actions.FindAction("Move");
@@ -20,6 +22,11 @@ public class PlayerWalk : AbstractBehaviour
          velX = _moveAction.ReadValue<float>() * _speed;
 
         _body2D.velocity = new Vector2(velX, _body2D.velocity.y);
+
+        if (velX != 0)
+            IsWalk = true;
+        else
+            IsWalk = false;
     }
 
 }
