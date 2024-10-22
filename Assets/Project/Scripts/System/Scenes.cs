@@ -16,5 +16,6 @@ public static class Scenes
         public const string Level = "Level";
         public const string RebindMenu = "RebindMenu";
         public const string AudioMenu = "AudioMenu";
+        public const string Experiments = "AttackExperements";
     }
 }

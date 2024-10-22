@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/SettingsMenu.unity
     guid: c67891ecf8c3b4a849ccccda92b1f617
+  - enabled: 1
+    path: Assets/Scenes/Experiments/AttackExperements.unity
+    guid: 34f607d8ededa41f48e38566ff34a754
   m_configObjects: {}
