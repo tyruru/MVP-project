@@ -2,20 +2,20 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[CustomEditor(typeof(RebindManager))]
+[CustomEditor(typeof(RebindCommand))]
 
-public class RebindManagerEditor : Editor
+public class RebindCommandEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
-        RebindManager rebindManager = (RebindManager)target;
+        RebindCommand rebindCommand = (RebindCommand)target;
 
         // Проверка, инициализирована ли привязка
-        if (rebindManager.currentBinding.actionReference != null)
+        if (rebindCommand.currentBinding.actionReference != null)
         {
-            var action = rebindManager.currentBinding.actionReference.action;
+            var action = rebindCommand.currentBinding.actionReference.action;
 
             if (action != null)
             {
@@ -29,13 +29,13 @@ public class RebindManagerEditor : Editor
                 }
 
                 // Выпадающий список для выбора индекса
-                int selectedIndex = EditorGUILayout.Popup("Select Binding", rebindManager.currentBinding.bindingIndex, bindingNames);
+                int selectedIndex = EditorGUILayout.Popup("Select Binding", rebindCommand.currentBinding.bindingIndex, bindingNames);
 
                 // Обновляем выбранный индекс
-                if (selectedIndex != rebindManager.currentBinding.bindingIndex)
+                if (selectedIndex != rebindCommand.currentBinding.bindingIndex)
                 {
-                    rebindManager.currentBinding.bindingIndex = selectedIndex;
-                    EditorUtility.SetDirty(rebindManager);
+                    rebindCommand.currentBinding.bindingIndex = selectedIndex;
+                    EditorUtility.SetDirty(rebindCommand);
                 }
             }
             else

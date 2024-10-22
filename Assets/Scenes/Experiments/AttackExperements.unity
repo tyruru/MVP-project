@@ -154,6 +154,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7905538114379457884, guid: b24fd883c8b62454dbd05cae3eb6ce00, type: 3}
   m_PrefabInstance: {fileID: 7905538115439143912}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &51374957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51374940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57008e8d9f2614545948bfae1bfd8749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &51374965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51374940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08a039bc71d0472690ea8dab7fccf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAssets: {fileID: -944628639613478452, guid: 71567955edc454458ab04aebd988ebd4, type: 3}
+  mapName: Movement
 --- !u!1 &235500806
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +542,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &905744490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7905538115824610449, guid: b24fd883c8b62454dbd05cae3eb6ce00, type: 3}
+  m_PrefabInstance: {fileID: 7905538115439143912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &905744492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905744490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd91db37707864636bdef1bec7258f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsAttack: 0
 --- !u!1 &1337760525
 GameObject:
   m_ObjectHideFlags: 0

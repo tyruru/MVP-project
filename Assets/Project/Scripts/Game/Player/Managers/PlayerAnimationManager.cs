@@ -10,6 +10,8 @@ public class PlayerAnimationManager : MonoBehaviour
     private CollisionState _collisionState;
     private PlayerFall _playerFall;
 
+    private PlayerAttackExperement _attackExp;
+
     private void Awake()
     {
         _animator = GetComponentInParent<Animator>();
@@ -18,6 +20,7 @@ public class PlayerAnimationManager : MonoBehaviour
         _jump = parentTransform.GetComponentInChildren<PlayerJump>();
         _collisionState = parentTransform.GetComponent<CollisionState>();
         _playerFall = parentTransform.GetComponentInChildren<PlayerFall>();
+        _attackExp = parentTransform.GetComponentInChildren<PlayerAttackExperement>();
     }
 
     private void Update()
@@ -34,6 +37,9 @@ public class PlayerAnimationManager : MonoBehaviour
         //fall
         if (_playerFall.IsFall)
             ChangeAnimState(4);
+        //attack
+        if (_attackExp.IsAttack)
+            ChangeAnimState(10);
 
     }
 
