@@ -1,42 +1,61 @@
 ﻿<Properties StartupConfiguration="{E2371FD7-DE7A-5D3F-3975-1EC5F81E8AB8}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ee9462ee-172e-4122-bb51-73fc7eff9678" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Game/Player/Managers/PlayerAnimationManager.cs">
     <Files>
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Command/ICommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="17" Column="6" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" Line="5" Column="20" />
+      <File FileName="Assets/Project/Scripts/Framework/Command/ICommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/IAsyncCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/INoResponseAsyncCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Command/INoResponseCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Presenter/IPresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Presenter/MonoPresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Command/INoResponseCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/Presenter/IPresenter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/Presenter/MonoPresenter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Health/HealthModel.cs" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerModel.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/PlayerView.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" />
-      <File FileName="Assets/Project/Scripts/System/Scenes.cs" />
-      <File FileName="Assets/Project/Scripts/Menu/OpenSceneWithoutLoadingScreen.cs" />
-      <File FileName="Assets/Project/Scripts/System/BootstrapController.cs" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" Line="7" Column="44" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" Line="27" Column="26" />
+      <File FileName="Assets/Project/Scripts/System/Scenes.cs" Line="20" Column="6" />
+      <File FileName="Assets/Project/Scripts/Menu/OpenSceneWithoutLoadingScreen.cs" Line="30" Column="30" />
+      <File FileName="Assets/Project/Scripts/System/BootstrapController.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Collision/CollisionState.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/FaceDirection.cs" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/FaceDirection.cs" Line="1" Column="1" />
       <File FileName="Assets/Scenes/Experiments/ScriptsMovement/TestJump.cs" />
       <File FileName="Assets/Scenes/Experiments/ScriptsMovement/TestFall.cs" />
-      <File FileName="Assets/Scenes/Experiments/MovementExperements.unity" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerFall.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Managers/PlayerAnimationManager.cs" Line="22" Column="9" />
+      <File FileName="Assets/Scenes/Experiments/MovementExperements.unity" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerFall.cs" Line="31" Column="25" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Managers/PlayerAnimationManager.cs" Line="13" Column="22" />
+      <File FileName="Assets/Project/Scripts/Menu/MenuButtonAnimation.cs" Line="29" Column="110" />
+      <File FileName="Assets/Scenes/Experiments/ScriptsDoTween/DoTweenExperiments.cs" Line="39" Column="1" />
+      <File FileName="Assets/Scenes/Experiments/DoTweenExperements.unity" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" Line="69" Column="1" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" Line="283" Column="1" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInputModule.cs" Line="272" Column="1" />
+      <File FileName="Assets/Scenes/Experiments/ScriptsAttackExperements/PlayerAttackExperement.cs" Line="32" Column="2" />
+      <File FileName="Assets/Scenes/Experiments/AttackExperements.unity" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Experiments/ScriptsAttackExperements/PlayerAttackView.cs" Line="35" Column="26" />
+      <File FileName="Assets/Project/Scripts/System/Client.Runtime.asmdef" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/BindingController.cs" Line="39" Column="25" />
+      <File FileName="Assets/Project/Scripts/SetUpBindingView.cs" Line="16" Column="1" />
+      <File FileName="Assets/Project/Scripts/Menu/RebindMenu/RebindCommandEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/System/SetUpBindingView.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MVP-project" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Plugins" expanded="True">
+                <Node name="Demigiant" expanded="True">
+                  <Node name="DOTween" expanded="True">
+                    <Node name="Modules" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Project" expanded="True">
                 <Node name="Scripts" expanded="True">
                   <Node name="Framework" expanded="True">
@@ -52,9 +71,7 @@
                     <Node name="Health" expanded="True" />
                     <Node name="Player" expanded="True">
                       <Node name="Behaviour" expanded="True" />
-                      <Node name="Managers" expanded="True">
-                        <Node name="PlayerAnimationManager.cs" selected="True" />
-                      </Node>
+                      <Node name="Managers" expanded="True" />
                     </Node>
                   </Node>
                   <Node name="Menu" expanded="True">
@@ -74,9 +91,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7ee1d6a6-5d33-4161-93f0-0f24b8fa7880" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

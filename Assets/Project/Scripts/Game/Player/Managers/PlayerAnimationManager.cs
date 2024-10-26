@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerAnimationManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerAnimationManager : MonoBehaviour
     private CollisionState _collisionState;
     private PlayerFall _playerFall;
 
-    private PlayerAttackExperement _attackExp;
+    private PlayerAttack _playerAttack;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class PlayerAnimationManager : MonoBehaviour
         _jump = parentTransform.GetComponentInChildren<PlayerJump>();
         _collisionState = parentTransform.GetComponent<CollisionState>();
         _playerFall = parentTransform.GetComponentInChildren<PlayerFall>();
-        _attackExp = parentTransform.GetComponentInChildren<PlayerAttackExperement>();
+        _playerAttack = parentTransform.GetComponentInChildren<PlayerAttack>();
     }
 
     private void Update()
@@ -38,9 +39,9 @@ public class PlayerAnimationManager : MonoBehaviour
         if (_playerFall.IsFall)
             ChangeAnimState(4);
         //attack
-        if (_attackExp.IsAttack)
+        if (_playerAttack.IsAttack)
             ChangeAnimState(10);
-
+        
     }
 
     private void ChangeAnimState(int value)

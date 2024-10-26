@@ -14,7 +14,7 @@ public class PlayerWalk : AbstractBehaviour
 
     void Start()
     {
-        _moveAction = _playerInput.actions.FindAction("Move");
+        _moveAction = _playerInput.actions.FindAction("Horizontal");
     }
 
     void Update()

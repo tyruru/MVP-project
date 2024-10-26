@@ -9,7 +9,7 @@ public class PlayerAttackExperement : AbstractBehaviour
 
     private void Start()
     {
-        PlayerAttackView.OnAttack += Attack;
+        PlayerAttackViewExperement.OnAttack += Attack;
     }
 
     private void Attack(bool isAttack)

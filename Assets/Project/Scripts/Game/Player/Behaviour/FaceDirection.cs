@@ -19,7 +19,7 @@ public class FaceDirection : AbstractBehaviour
     private void Start()
     {
         _currentDirection = Direction.Right;
-        _moveAction = _playerInput.actions.FindAction("Move");
+        _moveAction = _playerInput.actions.FindAction("Horizontal");
         _tranformParent = transform.parent;
     }
 

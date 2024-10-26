@@ -1,18 +1,23 @@
-using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerAttackView : AbstractBehaviour
+public class PlayerAttackView : MonoBehaviour
 {
     public static event Action<bool> OnAttack;
 
     private InputAction _attackAction;
+    private InputAction _verticalAction;
 
     private bool IsAttack = false;
 
     private void Start()
     {
-        _attackAction = _playerInput.actions.FindAction("Attack");
+        _attackAction = GetComponent <PlayerInput>().actions.FindAction("Attack");
+        // Нужен будет для атаки вверх/вниз
+        _verticalAction = GetComponent<PlayerInput>().actions.FindAction("Vertical");
     }
 
     private void Update()
