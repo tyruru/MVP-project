@@ -168,18 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActionAssets: {fileID: -944628639613478452, guid: 71567955edc454458ab04aebd988ebd4, type: 3}
   mapName: Movement
---- !u!114 &51374974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51374940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f78b7bf947ba40deb9684c6e2ae4b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &51374982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +677,7 @@ GameObject:
   - component: {fileID: 688976983}
   - component: {fileID: 688976982}
   - component: {fileID: 688976984}
-  - component: {fileID: 688976985}
+  - component: {fileID: 688976986}
   m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -801,7 +789,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.0001, y: 0.0001}
   m_Direction: 1
---- !u!114 &688976985
+--- !u!114 &688976986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -810,7 +798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 688976979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907b301d8fe98461ebfb49380097ddee, type: 3}
+  m_Script: {fileID: 11500000, guid: aaafaf9e350424dccae2ebf99ae209d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTag: Enemy
@@ -819,18 +807,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7905538115824610449, guid: b24fd883c8b62454dbd05cae3eb6ce00, type: 3}
   m_PrefabInstance: {fileID: 7905538115439143912}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &905744494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905744490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 108d12d960ff34d4299e4c8385ce38a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &905744500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +820,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttack: 0
+--- !u!114 &905744502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905744490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a90962e74554ed892ea4d96a957181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1337760525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7905538114379457884, guid: b24fd883c8b62454dbd05cae3eb6ce00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.03
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 7905538114379457884, guid: b24fd883c8b62454dbd05cae3eb6ce00, type: 3}
       propertyPath: m_LocalPosition.z

@@ -40,7 +40,7 @@ public class PlayerAnimationManager : MonoBehaviour
             ChangeAnimState(4);
         //attack
         if (_playerAttack.IsAttack)
-            ChangeAnimState(10);
+            ChangeAnimState(_playerAttack.attackId);
         
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttackView : MonoBehaviour
 {
-    public static event Action<bool> OnAttack;
+    public static event Action<bool, float> OnAttack;
 
     private InputAction _attackAction;
     private InputAction _verticalAction;
@@ -16,7 +16,7 @@ public class PlayerAttackView : MonoBehaviour
     private void Start()
     {
         _attackAction = GetComponent <PlayerInput>().actions.FindAction("Attack");
-        // Нужен будет для атаки вверх/вниз
+        // Нужен для атаки вверх/вниз
         _verticalAction = GetComponent<PlayerInput>().actions.FindAction("Vertical");
     }
 
@@ -34,11 +34,11 @@ public class PlayerAttackView : MonoBehaviour
 
     public void StartAttack()
     {
-        OnAttack?.Invoke(true);
+        OnAttack?.Invoke(true, _verticalAction.ReadValue<float>());
     }
 
     public void EndAttack()
     {
-        OnAttack?.Invoke(false);
+        OnAttack?.Invoke(false, 0);
     }
 }

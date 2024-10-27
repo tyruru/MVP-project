@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackViewExperement : MonoBehaviour
+public class AttackPoint : MonoBehaviour
 {
     private KnockBack _knockBack;
 
     private void Awake()
     {
-        _knockBack = GetComponentInChildren<KnockBack>();
+        _knockBack = transform.parent.GetComponentInChildren<KnockBack>();
     }
 
     [SerializeField] private string _targetTag;
@@ -16,7 +16,7 @@ public class AttackViewExperement : MonoBehaviour
     {
         if (target.tag == _targetTag)
         {
-            _knockBack.DoKnockBack(target.transform.position, 0.5f, 5f);
+            _knockBack.DoKnockBack(target.transform.position, 0.3f, 8f);
         }
     }
 }
