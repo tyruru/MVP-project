@@ -23,6 +23,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack(bool isAttack, float value)
     {
+        IsAttack = isAttack;
+
         if ((int)value == 0)
             attackId = (int)AttackId.Forward;
 
@@ -31,7 +33,5 @@ public class PlayerAttack : MonoBehaviour
 
         if ((int)value == 1)
             attackId = (int)AttackId.Up;
-
-        IsAttack = isAttack;
     }
 }

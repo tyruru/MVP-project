@@ -31,7 +31,7 @@ public class KnockBack : MonoBehaviour
 
         while (timer < duration)
         {
-            _body2D.velocity = new Vector2(direction.x * initialForce * (1 - (timer / duration)), _body2D.velocity.y);
+            _body2D.velocity = direction * initialForce * (1 - (timer / duration));
 
             timer += Time.deltaTime;  
             yield return null;
