@@ -6,6 +6,7 @@ public class KnockBack : MonoBehaviour
 {
     private bool _isKnockedBack = false;
     private Rigidbody2D _body2D;
+    private Coroutine _coroutine;
 
     private void Awake()
     {
@@ -14,12 +15,29 @@ public class KnockBack : MonoBehaviour
 
     public void DoKnockBack(Vector2 attackerPosition, float knockbackDuration, float knockBackForce)
     {
-        if (!_isKnockedBack) 
-        {
-            Vector2 knockbackDirection = ((Vector2)transform.position - attackerPosition).normalized;
+        Vector2 knockbackDirection = ((Vector2)transform.position - attackerPosition).normalized;
 
-            StartCoroutine(KnockbackCoroutine(knockbackDirection, knockbackDuration, knockBackForce));
+        Test(knockbackDirection, knockbackDuration, knockBackForce);
+    }
+
+    public void DoKnockBackX(float knockbackDuration, float knockBackForce)
+    {
+        float velX = transform.parent.localScale.x;
+        Vector2 knockbackDirection = new Vector2(velX, 0);
+
+        Test(knockbackDirection, knockbackDuration, knockBackForce);
+    }
+
+    private void Test(Vector2 direction, float duration, float force)
+    {
+        if (_isKnockedBack)
+        {
+            StopCoroutine(_coroutine);
+            _isKnockedBack = false;
+            _body2D.velocity = new Vector2(0, _body2D.velocity.y);
         }
+
+        _coroutine = StartCoroutine(KnockbackCoroutine(direction, duration, force));
     }
 
     private IEnumerator KnockbackCoroutine(Vector2 direction, float duration, float force)
@@ -27,11 +45,10 @@ public class KnockBack : MonoBehaviour
         _isKnockedBack = true;
 
         float timer = 0f;
-        float initialForce = force;
 
         while (timer < duration)
         {
-            _body2D.velocity = direction * initialForce * (1 - (timer / duration));
+            _body2D.velocity = direction * force * (1 - (timer / duration));
 
             timer += Time.deltaTime;  
             yield return null;
