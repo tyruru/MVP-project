@@ -30,7 +30,7 @@ public class PlayerAnimationManager : MonoBehaviour
         if(_collisionState.IsStanding)
             ChangeAnimState(1);
         //walk
-        if (_walk.IsWalk)
+        if (_walk.IsWalk && _collisionState.IsStanding)
             ChangeAnimState(2);
         //jump
         if (_jump.IsJumping)
