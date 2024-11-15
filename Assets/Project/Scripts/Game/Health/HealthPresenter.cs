@@ -7,14 +7,22 @@ using UnityEngine.Assertions;
 public class HealthPresenter : MonoBehaviour
 {
     [SerializeField] private int _maxHealth;
+    [SerializeField] private float _invulnerabilityTime;
     [SerializeField] private HealthView _healthView; // ?
+    [SerializeField] private float _knockBackDuration;
+    [SerializeField] private float _knockBackForce;
+    [SerializeField] private float _timeStopAfterTakeDamaage;
+
     private HealthModel _healthModel;
+    private bool _canTakeDamage;
+    private KnockBack _knockBack;
 
     private void Awake()
     {
-        _healthModel = new();
-
+        _healthModel = new(_maxHealth, _invulnerabilityTime);
+        _canTakeDamage = true;
         Assert.IsNotNull(_healthView, "[PlayerPresenter] PlayerView is required");
+        _knockBack = transform.parent.GetComponentInChildren<KnockBack>();
     }
 
     private void OnEnable()
@@ -31,19 +39,27 @@ public class HealthPresenter : MonoBehaviour
 
     private void Start()
     {
-        IncrementMaxHealth(_maxHealth);
         _healthModel.RestoreHealth();
     }
 
     private void UpdateView()
     {
-        Debug.Log("Presenter: current hp is " + _healthModel.CurrentHealth);
-        _healthView.ChangeView();
+        float percent = (float)_healthModel.CurrentHealth / _healthModel.MaxHealth;
+
+        _healthView.ChangeView(percent);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Collision2D enemy)
     {
-        _healthModel.CurrentHealth -= damage;
+        if (_canTakeDamage)
+        {
+            _healthModel.CurrentHealth -= damage;
+            _canTakeDamage = false;
+            StartCoroutine(InvulnerabilityCoroutine());
+            _knockBack.DoKnockBack(enemy.transform.position, _knockBackDuration, _knockBackForce);
+            StopTime.StopForSeconds(_timeStopAfterTakeDamaage);
+        }
+
     }
 
     public void Heal(int amount)
@@ -51,13 +67,10 @@ public class HealthPresenter : MonoBehaviour
         _healthModel.CurrentHealth += amount;
     }
 
-    public void IncrementMaxHealth(int amount)
-    {
-        _healthModel.MaxHealth += amount;
-    }
 
-    public void DecrementMaxHp(int amount)
+    private IEnumerator InvulnerabilityCoroutine()
     {
-        _healthModel.MaxHealth -= amount;
+        yield return new WaitForSecondsRealtime(_healthModel.InvulnerabilityTime);
+        _canTakeDamage = true;
     }
 }

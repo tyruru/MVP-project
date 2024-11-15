@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AttackPoint : MonoBehaviour
 {
+    [SerializeField] private float _timeStopAfterHit;
+
     private KnockBack _knockBack;
 
     public float knockBackForce;
@@ -21,12 +23,13 @@ public class AttackPoint : MonoBehaviour
         knockBackDuration = 0.3f;
     }
 
-    [SerializeField] private string _targetTag;
+    [SerializeField] private List<string> _targetTags;
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.tag == _targetTag)
+        if (_targetTags.Contains(target.tag))
         {
             _knockBack.DoKnockBack(target.transform.position, knockBackDuration, knockBackForce);
+            StopTime.StopForSeconds(_timeStopAfterHit);
         }
     }
 }

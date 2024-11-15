@@ -6,10 +6,14 @@ public class HealthModel
 {
     public event Action OnHealthChanged;
 
-    [SerializeField] private int _maxHealth;
+    public HealthModel(int maxHealth, float invulnerabilityTime)
+    {
+        _maxHealth = maxHealth;
+        _invulnerabilityTime = invulnerabilityTime;
+        _currentHealth = maxHealth;
+    }
 
     private int _currentHealth;
-
     public int CurrentHealth
     {
         get => _currentHealth;
@@ -20,6 +24,7 @@ public class HealthModel
         }
     }
 
+    private int _maxHealth;
     public int MaxHealth
     {
         get => _maxHealth;
@@ -29,6 +34,9 @@ public class HealthModel
             OnHealthChanged?.Invoke();
         }
     }
+
+    private float _invulnerabilityTime;
+    public float InvulnerabilityTime => _invulnerabilityTime;
 
     public void RestoreHealth()
     {

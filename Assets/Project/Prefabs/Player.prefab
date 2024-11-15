@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3529406955275675425}
   - component: {fileID: 3529406955275675427}
   - component: {fileID: 3529406955275675433}
+  - component: {fileID: 276654738}
+  - component: {fileID: 276654739}
   m_Layer: 0
   m_Name: Behaviour
   m_TagString: Untagged
@@ -138,6 +140,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.4
   _force: 20
+--- !u!114 &276654738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529406954789515308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65f5baf099244c6d9726e44f4f93824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &276654739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529406954789515308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bc9d315db0245f2a6292ed2238f083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _width: 2.4
+  _height: 2.4
+  _debugColor: {r: 1, g: 0.8726306, b: 0, a: 1}
+  _pos: {x: 0, y: 0}
+  _targetTag: Interactable
 --- !u!1 &3529406954790421254
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,9 +305,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaafaf9e350424dccae2ebf99ae209d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeStopAfterHit: 0.2
   knockBackForce: 0
   knockBackDuration: 0
-  _targetTag: Enemy
+  _targetTags:
+  - Enemy
+  - Obstacle
 --- !u!1 &3529406955444109907
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +448,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3529406956566149627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8, y: -1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

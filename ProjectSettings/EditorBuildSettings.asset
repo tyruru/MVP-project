@@ -6,33 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Experiments/MovementExperements.unity
+    path: Assets/Project/Scenes/Experiments/Movement/MovementExperements.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Bootstrap/Bootstrap.unity
+    path: Assets/Project/Scenes/Bootstrap/Bootstrap.unity
     guid: b68cd0b2aaeeb46c58c8879548a55ca4
   - enabled: 1
-    path: Assets/Scenes/System/System_Audio.unity
+    path: Assets/Project/Scenes/System/System_Audio.unity
     guid: b9432e93c50b34678881e79c75502351
   - enabled: 1
-    path: Assets/Scenes/System/System_Input.unity
+    path: Assets/Project/Scenes/System/System_Input.unity
     guid: 9fa412debf57b41d7b05c81542d927d2
   - enabled: 1
-    path: Assets/Scenes/System/System_MainCamera.unity
+    path: Assets/Project/Scenes/System/System_MainCamera.unity
     guid: 3e15a9ec42d5d494f98a2dc5c7d85c58
   - enabled: 1
-    path: Assets/Scenes/Menu/MainMenu.unity
+    path: Assets/Project/Scenes/Menu/MainMenu.unity
     guid: defd8bcebec194c53861d9e85795512a
   - enabled: 1
-    path: Assets/Scenes/Menu/RebindMenu.unity
+    path: Assets/Project/Scenes/Menu/RebindMenu.unity
     guid: 1ff586670cf1444a8a28cde331ed15fa
   - enabled: 1
-    path: Assets/Scenes/Menu/AudioMenu.unity
+    path: Assets/Project/Scenes/Menu/AudioMenu.unity
     guid: 7fd9a155d44f242e9a404897917cfba5
   - enabled: 1
-    path: Assets/Scenes/Menu/SettingsMenu.unity
+    path: Assets/Project/Scenes/Menu/SettingsMenu.unity
     guid: c67891ecf8c3b4a849ccccda92b1f617
   - enabled: 1
-    path: Assets/Scenes/Experiments/AttackExperements.unity
+    path: Assets/Project/Scenes/Experiments/AttackExperements/AttackExperements.unity
     guid: 34f607d8ededa41f48e38566ff34a754
+  - enabled: 1
+    path: Assets/Project/Scenes/Game/MiniGames/SwordGame.unity
+    guid: aa33cbedcf934437186860c10db44689
   m_configObjects: {}

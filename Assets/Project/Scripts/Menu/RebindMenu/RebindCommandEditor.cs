@@ -1,7 +1,8 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+#if UNITY_EDITOR
+using UnityEditor;
 [CustomEditor(typeof(RebindCommand))]
 
 public class RebindCommandEditor : Editor
@@ -49,3 +50,4 @@ public class RebindCommandEditor : Editor
         }
     }
 }
+#endif

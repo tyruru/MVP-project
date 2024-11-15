@@ -25,16 +25,16 @@ public class PlayerAttackView : MonoBehaviour
         if (_attackAction.ReadValue<float>() == 1 && IsAttack == false)
         {
             IsAttack = true;
-            StartAttack();
+            StartAttack(_verticalAction.ReadValue<float>());
         }
 
         if (_attackAction.ReadValue<float>() == 0)
             IsAttack = false;
-    }
+    }   
 
-    public void StartAttack()
+    public void StartAttack(float value)
     {
-        OnAttack?.Invoke(true, _verticalAction.ReadValue<float>());
+        OnAttack?.Invoke(true, value);
     }
 
     public void EndAttack()

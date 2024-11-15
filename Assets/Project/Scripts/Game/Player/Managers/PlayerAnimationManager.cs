@@ -10,6 +10,7 @@ public class PlayerAnimationManager : MonoBehaviour
     private PlayerJump _jump;
     private CollisionState _collisionState;
     private PlayerFall _playerFall;
+    private PlayerDash _playerDash;
 
     private PlayerAttack _playerAttack;
 
@@ -17,17 +18,20 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         _animator = GetComponentInParent<Animator>();
         Transform parentTransform = transform.parent;
+
         _walk = parentTransform.GetComponentInChildren<PlayerWalk>();
         _jump = parentTransform.GetComponentInChildren<PlayerJump>();
-        _collisionState = parentTransform.GetComponent<CollisionState>();
+        _playerDash = parentTransform.GetComponentInChildren<PlayerDash>();
         _playerFall = parentTransform.GetComponentInChildren<PlayerFall>();
+
+        _collisionState = parentTransform.GetComponent<CollisionState>();
         _playerAttack = parentTransform.GetComponentInChildren<PlayerAttack>();
     }
 
     private void Update()
     {
         //standing
-        if(_collisionState.IsStanding)
+        //if(_collisionState.IsStanding)
             ChangeAnimState(1);
         //walk
         if (_walk.IsWalk && _collisionState.IsStanding)
@@ -41,6 +45,9 @@ public class PlayerAnimationManager : MonoBehaviour
         //attack
         if (_playerAttack.IsAttack)
             ChangeAnimState(_playerAttack.attackId);
+        //dash
+        if (_playerDash.IsDash)
+            ChangeAnimState(4);
         
     }
 

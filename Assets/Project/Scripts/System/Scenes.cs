@@ -6,6 +6,7 @@ public static class Scenes
         public const string Audio = "System_Audio";
         public const string Input = "System_Input";
         public const string MainCamera = "System_MainCamera";
+        public const string Hud = "System_Hud";
     }
 
     public static class Activities
@@ -17,5 +18,6 @@ public static class Scenes
         public const string RebindMenu = "RebindMenu";
         public const string AudioMenu = "AudioMenu";
         public const string Experiments = "AttackExperements";
+        public const string SwordGame = "SwordGame";
     }
 }
