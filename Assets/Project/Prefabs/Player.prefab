@@ -413,8 +413,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed32fa483e50146999ef8ba79770cdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 5
+  _invulnerabilityTime: 2
   _healthView: {fileID: 3529406956566149600}
+  _knockBackDuration: 0.3
+  _knockBackForce: 20
+  _timeStopAfterTakeDamaage: 0.5
 --- !u!1 &3529406956566149627
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3becd7dc63546e883b8c8491903a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hpBar: {fileID: 0}
   _targets:
   - Enemy
   - Bullet

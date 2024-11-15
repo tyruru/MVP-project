@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogBoxContainer : MonoBehaviour
@@ -21,15 +22,13 @@ public class DialogBoxContainer : MonoBehaviour
     private int _currentSentence;
     private AudioSource _sfxSource;
     private Coroutine _typingRoutine;
-    private PlayerInputToggler _playerToggler;
-   
-    private void Start()
-    {
-        _playerToggler = FindObjectOfType<PlayerInputToggler>();
-    }
+    private AbstractToggler<PlayerInput> _playerToggler;
 
     public void ShowDialog(TextData data)
     {
+        if(_playerToggler == null)
+            _playerToggler = FindObjectOfType<PlayerInputToggler>();
+
         if (_container.active == true)
             return;
         _data = data;

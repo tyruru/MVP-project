@@ -857,9 +857,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7413411978329615860, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413411979883384512, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7419791004202770544, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
       propertyPath: m_Name
       value: MenuBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220998495302537502, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -433
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220998495302537502, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699291083834439310, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699291083834439310, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
