@@ -71,5 +71,13 @@ public class MenuButtonAnimation : MonoBehaviour, IPointerExitHandler, IPointerE
        
     }
 
+    private void OnDisable()
+    {
+        foreach (Tween tween in _tweens)
+            tween.Pause();
 
+        Color color = Color.white;
+        color.a = 0;
+        _button.GetComponent<Image>().color = color;
+    }
 }

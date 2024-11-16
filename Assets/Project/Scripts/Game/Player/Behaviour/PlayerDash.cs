@@ -33,7 +33,7 @@ public class PlayerDash : AbstractBehaviour
 
         // при касании земли перезаряжаем рывок
         if (_collisionState.IsStanding)
-            _canDash = true;
+            RestoreDash();
 
         _timer += Time.deltaTime;
     }
@@ -44,6 +44,11 @@ public class PlayerDash : AbstractBehaviour
         _canDash = false;
         _knockBack.DoKnockBackX(_duration, _force);
         _timer = 0f;
+    }
+
+    public void RestoreDash()
+    {
+        _canDash = true;
     }
 
 }

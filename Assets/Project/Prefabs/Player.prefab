@@ -364,8 +364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3529406956476346395}
-  - component: {fileID: 3529406956476346373}
-  - component: {fileID: 3529406956476346394}
+  - component: {fileID: 1622387955233581952}
   m_Layer: 0
   m_Name: Presenter
   m_TagString: Untagged
@@ -388,7 +387,7 @@ Transform:
   m_Father: {fileID: 3529406956566149601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3529406956476346373
+--- !u!114 &1622387955233581952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,25 +396,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3529406956476346392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9ab20114ec144fe82409b6b852036f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerView: {fileID: 3529406956566149626}
---- !u!114 &3529406956476346394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3529406956476346392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed32fa483e50146999ef8ba79770cdd6, type: 3}
+  m_Script: {fileID: 11500000, guid: aecdc652b4ad14b21b13e2f70b4625f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 5
   _invulnerabilityTime: 2
-  _healthView: {fileID: 3529406956566149600}
+  _healthView: {fileID: 7004422660899380976}
   _knockBackDuration: 0.3
   _knockBackForce: 20
   _timeStopAfterTakeDamaage: 0.5
@@ -431,13 +417,12 @@ GameObject:
   - component: {fileID: 3529406956566149606}
   - component: {fileID: 3529406956566149607}
   - component: {fileID: 3529406956566149604}
-  - component: {fileID: 3529406956566149626}
-  - component: {fileID: 3529406956566149600}
   - component: {fileID: 3529406956566149603}
   - component: {fileID: 3529406956566149602}
   - component: {fileID: 3529406955494611976}
   - component: {fileID: 3529406955494612000}
   - component: {fileID: 3529406955494612179}
+  - component: {fileID: 7004422660899380976}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -553,34 +538,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3529406956566149626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3529406956566149627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980236955b06f49b19899f4cac1753f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3529406956566149600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3529406956566149627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d3becd7dc63546e883b8c8491903a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hpBar: {fileID: 0}
-  _targets:
-  - Enemy
-  - Bullet
 --- !u!114 &3529406956566149603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,3 +634,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f984730bada545008a96c1e4c00e264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7004422660899380976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529406956566149627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74aa26cde5b9a4130a93eecfa26d56a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - Enemy
+  - Obstacle

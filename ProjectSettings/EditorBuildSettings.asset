@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/System/System_Hud.unity
     guid: e8d326748ac544a45903be9b2c88b46e
+  - enabled: 1
+    path: Assets/Project/Scenes/Game/Levels/Level0.unity
+    guid: 509285b4316044fdd93c9ee546f58359
+  - enabled: 1
+    path: Assets/Project/Scenes/Game/Levels/Level1.unity
+    guid: 7cca038a6713541758fe622764053d6d
+  - enabled: 1
+    path: Assets/Project/Scenes/Game/Levels/Level2.unity
+    guid: 47b21c3b9ec154d73be2557b48bbb0af
   m_configObjects: {}
