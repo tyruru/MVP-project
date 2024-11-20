@@ -7,7 +7,7 @@ public class ShowPopup : MonoBehaviour
 {
     private PopupBoxContainer _popupBox;
 
-    public void Show(TextData data)
+    public void Show(string text)
     {
         if (_popupBox == null)
             _popupBox = FindObjectOfType<PopupBoxContainer>();
@@ -15,7 +15,7 @@ public class ShowPopup : MonoBehaviour
         if (_popupBox == null)
             return;
 
-        _popupBox.ShowPopup(data);
+        _popupBox.ShowPopup(text);
     }
 
     public void Close()

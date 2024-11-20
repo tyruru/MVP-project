@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using Zenject;
-using UnityEngine.Assertions;
 
 public class HealthPresenter : MonoBehaviour
 {
@@ -14,14 +11,21 @@ public class HealthPresenter : MonoBehaviour
     [SerializeField] protected float _timeStopAfterTakeDamaage;
 
     protected HealthModel _healthModel;
-    protected bool _canTakeDamage;
     protected KnockBack _knockBack;
+
+    protected bool _isDead;
+    public bool IsDead => _isDead;
+
+    public bool CanTakeDamage { get; protected set; }
+
+    public bool IsDamage { get; protected set;}
 
     protected virtual void Awake()
     {
         _healthModel = new(_maxHealth, _invulnerabilityTime);
-        _canTakeDamage = true;
+        CanTakeDamage = true;
         _knockBack = transform.parent.GetComponentInChildren<KnockBack>();
+        _isDead = false;
     }
 
     protected void Start()
@@ -33,6 +37,7 @@ public class HealthPresenter : MonoBehaviour
     {
         _healthModel.OnHealthChanged += UpdateView;
         _healthView.OnDamage += TakeDamage;
+        _healthView.OnEndTakeDamage += EndTakeDamage;
     }
 
     protected void OnDisable()
@@ -50,12 +55,24 @@ public class HealthPresenter : MonoBehaviour
 
     public virtual void TakeDamage(int damage, Vector2 enemy)
     {
-        if (_canTakeDamage)
+        if (CanTakeDamage)
         {
             _healthModel.CurrentHealth -= damage;
-            _knockBack.DoKnockBack(enemy, _knockBackDuration, _knockBackForce);
-        }
 
+            if (_healthModel.CurrentHealth <= 0)
+                Dead();
+
+            else
+            {
+                _knockBack.DoKnockBack(enemy, _knockBackDuration, _knockBackForce);
+                IsDamage = true;
+            }
+        }
+    }
+
+    private void EndTakeDamage()
+    {
+        IsDamage = false;
     }
 
     public void Heal(int amount)
@@ -63,6 +80,9 @@ public class HealthPresenter : MonoBehaviour
         _healthModel.CurrentHealth += amount;
     }
 
-
+    private void Dead()
+    {
+        _isDead = true;
+    }
     
 }

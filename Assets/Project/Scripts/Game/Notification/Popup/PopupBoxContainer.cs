@@ -18,13 +18,12 @@ public class PopupBoxContainer : MonoBehaviour
     //[SerializeField] private AudioClip _open;
     //[SerializeField] private AudioClip _close;
 
-    private TextData _data;
-    private int _currentSentence;
+    private string _message;
     private AudioSource _sfxSource;
 
     private Coroutine _typingRoutine;
 
-    public void ShowPopup(TextData data)
+    public void ShowPopup(string text)
     {
         if (_dialogContainer.active)
         {
@@ -35,8 +34,7 @@ public class PopupBoxContainer : MonoBehaviour
         if (_container.active)
             return;
 
-        _data = data;
-        _currentSentence = 0;
+        _message = text;
         _text.text = string.Empty;
 
         _container.SetActive(true);
@@ -51,7 +49,7 @@ public class PopupBoxContainer : MonoBehaviour
     private IEnumerator StartPopupText()
     {
         _text.text = string.Empty;
-        var sentence = _data.Sentences[_currentSentence];
+        var sentence = _message;
 
         foreach (var letter in sentence)
         {
@@ -72,32 +70,6 @@ public class PopupBoxContainer : MonoBehaviour
     private void OnCloseAnimationComplete()
     {
 
-    }
-
-    public void OnSkip()
-    {
-        if (_typingRoutine == null)
-            return;
-
-        StopTypeAnimation();
-        _text.text = _data.Sentences[_currentSentence];
-    }
-
-    public void OnContinue()
-    {
-        StopTypeAnimation();
-        _currentSentence++;
-
-        var isDialogCompleted = _currentSentence >= _data.Sentences.Length;
-
-        if (isDialogCompleted)
-        {
-            HideDialogBox();
-        }
-        else
-        {
-            OnStartPopupAnimation();
-        }
     }
 
     private void HideDialogBox()

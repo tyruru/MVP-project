@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 1338329677}
-  _closePreviousScene: 1
+  _closePreviousScene: 0
   _sceneName: SettingsMenu
 --- !u!1001 &1338329675
 PrefabInstance:
@@ -1900,15 +1900,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3822619864284302479, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3822619864284302479, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3822619864284302479, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3822619864284302479, guid: 654001a1390cf4591a3726147ee06b11, type: 3}
       propertyPath: m_AnchoredPosition.x

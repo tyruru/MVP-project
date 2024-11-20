@@ -1024,9 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4637adbe914a44c74aa3b7120006d680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bound:
-    _sentences:
-    - Press up arrow to interact
+  _text: Press interact button
 --- !u!212 &957818693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1881,6 +1879,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4637adbe914a44c74aa3b7120006d680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bound:
-    _sentences:
-    - Press up arrow to interact
+  _text: Press interact button

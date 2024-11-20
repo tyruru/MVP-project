@@ -26,10 +26,10 @@ public class MenuButtonAnimation : MonoBehaviour, IPointerExitHandler, IPointerE
     {
         _tweens = new List<Tween>()
         {
-            (_hoverTween = _button.GetComponent<Image>().DOColor(_hoverColor, 1).Pause().SetAutoKill(false)),
-            (_exitTween = _button.GetComponent<Image>().DOColor(_baseColor, 1).Pause().SetAutoKill(false)),
-            (_clickDownTween = _button.GetComponent<Image>().DOColor(_clickColor, 1).Pause().SetAutoKill(false)),
-            (_clickUpTween = _button.GetComponent<Image>().DOColor(_hoverColor, 1).Pause().SetAutoKill(false)),
+            (_hoverTween = _button.GetComponent<Image>().DOColor(_hoverColor, 1).Pause().SetAutoKill(false).SetUpdate(true)),
+            (_exitTween = _button.GetComponent<Image>().DOColor(_baseColor, 1).Pause().SetAutoKill(false).SetUpdate(true)),
+            (_clickDownTween = _button.GetComponent<Image>().DOColor(_clickColor, 1).Pause().SetAutoKill(false).SetUpdate(true)),
+            (_clickUpTween = _button.GetComponent<Image>().DOColor(_hoverColor, 1).Pause().SetAutoKill(false).SetUpdate(true)),
         };
     }
 
@@ -79,5 +79,11 @@ public class MenuButtonAnimation : MonoBehaviour, IPointerExitHandler, IPointerE
         Color color = Color.white;
         color.a = 0;
         _button.GetComponent<Image>().color = color;
+    }
+
+    private void OnDestroy()
+    {
+        foreach (Tween tween in _tweens)
+            tween.Kill();
     }
 }

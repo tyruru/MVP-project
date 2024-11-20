@@ -9,6 +9,9 @@ TagManager:
   - Obstacle
   - Interactable
   - playerHpSlider
+  - TeleportPoint
+  - Platform
+  - DeadMenu
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using System;
 public class HealthView : MonoBehaviour
 { 
     public event Action<int, Vector2> OnDamage;
+    public event Action OnEndTakeDamage;
 
     public virtual void ChangeView(float hpPercent)
     {
@@ -15,4 +16,8 @@ public class HealthView : MonoBehaviour
         OnDamage?.Invoke(damage, target);
     }
 
+    public void EndTakeDamage()
+    {
+        OnEndTakeDamage?.Invoke();
+    }
 }

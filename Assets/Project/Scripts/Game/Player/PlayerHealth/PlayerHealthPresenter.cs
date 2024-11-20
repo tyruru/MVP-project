@@ -17,18 +17,28 @@ public class PlayerHealthPresenter : HealthPresenter
     {
         base.TakeDamage(damage, enemy);
 
-        if (_canTakeDamage)
+        if (IsDead)
         {
-            _canTakeDamage = false;
+            Debug.Log("IS DEAD");
+            FindObjectOfType<PlayerInputToggler>().DisableObjects();
+            FindObjectOfType<PauseButtonCommand>().HideButton();
+            GameObject.FindGameObjectWithTag("DeadMenu").GetComponent<DeadMenu>().Execute(); ; 
+            return;
+        }
+
+        if (CanTakeDamage)
+        {
+            CanTakeDamage = false;
             StopTime.StopForSeconds(_timeStopAfterTakeDamaage);
             StartCoroutine(InvulnerabilityCoroutine());
             _dash.RestoreDash();
         }
+
     }
 
     private IEnumerator InvulnerabilityCoroutine()
     {
         yield return new WaitForSecondsRealtime(_healthModel.InvulnerabilityTime);
-        _canTakeDamage = true;
+        CanTakeDamage = true;
     }
 }

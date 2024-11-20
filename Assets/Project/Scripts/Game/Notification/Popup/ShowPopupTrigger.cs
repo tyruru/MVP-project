@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowPopupTrigger : MonoBehaviour
 {
-    [SerializeField] TextData _bound;
+    [SerializeField] private string _text = "Press interact button";
 
     private ShowPopup _showPopup;
     private bool _triggerEnter;
@@ -16,7 +16,7 @@ public class ShowPopupTrigger : MonoBehaviour
 
     private void Show()
     {
-        _showPopup.Show(_bound);
+        _showPopup.Show(_text);
     }
 
     private void Close()

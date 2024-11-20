@@ -20,6 +20,8 @@ public class HealthModel
         set
         {
             _currentHealth = value;
+            if (_currentHealth < 0)
+                _currentHealth = 0;
             OnHealthChanged?.Invoke();
         }
     }

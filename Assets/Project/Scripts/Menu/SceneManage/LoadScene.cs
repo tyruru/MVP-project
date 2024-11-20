@@ -38,7 +38,9 @@ public class LoadScene
         {
             if (_sceneForClosing != null)
                 SceneManager.UnloadScene(_sceneForClosing);
-            SceneManager.SetActiveScene(scene);
+
+            if(scene.name != null)
+                SceneManager.SetActiveScene(scene);
         }
         Complete();
     }

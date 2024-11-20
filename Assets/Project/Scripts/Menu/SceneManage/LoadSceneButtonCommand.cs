@@ -33,6 +33,5 @@ public class LoadSceneButtonCommand : ButtonCommand, IActivityScenesEditor
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        DOTween.KillAll();
     }
 }

@@ -11,8 +11,8 @@ public class PlayerAnimationManager : MonoBehaviour
     private CollisionState _collisionState;
     private PlayerFall _playerFall;
     private PlayerDash _playerDash;
-
     private PlayerAttack _playerAttack;
+    private HealthPresenter _healthPresenter;
 
     private void Awake()
     {
@@ -26,13 +26,28 @@ public class PlayerAnimationManager : MonoBehaviour
 
         _collisionState = parentTransform.GetComponent<CollisionState>();
         _playerAttack = parentTransform.GetComponentInChildren<PlayerAttack>();
+
+        _healthPresenter = parentTransform.GetComponentInChildren<PlayerHealthPresenter>();
     }
 
     private void Update()
     {
+        //dead
+        if (_healthPresenter.IsDead)
+        {
+            ChangeAnimState(-1);
+            return;
+        }
+
+        //take damage
+        if (_healthPresenter.IsDamage)
+        {
+            ChangeAnimState(0);
+            return;
+        }
+
         //standing
-        //if(_collisionState.IsStanding)
-            ChangeAnimState(1);
+        ChangeAnimState(1);
         //walk
         if (_walk.IsWalk && _collisionState.IsStanding)
             ChangeAnimState(2);
@@ -40,7 +55,7 @@ public class PlayerAnimationManager : MonoBehaviour
         if (_jump.IsJumping)
             ChangeAnimState(3);
         //fall
-        if (_playerFall.IsFall)
+        if (_playerFall.IsFall && !_collisionState.IsStanding)
             ChangeAnimState(4);
         //attack
         if (_playerAttack.IsAttack)
@@ -48,6 +63,7 @@ public class PlayerAnimationManager : MonoBehaviour
         //dash
         if (_playerDash.IsDash)
             ChangeAnimState(4);
+      
         
     }
 
@@ -55,4 +71,6 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         _animator.SetInteger("AnimState", value);
     }
+
+
 }

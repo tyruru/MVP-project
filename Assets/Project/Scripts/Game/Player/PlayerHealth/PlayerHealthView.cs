@@ -9,6 +9,8 @@ public class PlayerHealthView : HealthView
     private void Awake()
     {
         _hpBar = GameObject.FindGameObjectWithTag("playerHpSlider").GetComponent<Slider>();
+        //Если сцена с игроком загружается, всегде должно идти время
+        Time.timeScale = 1f;
     }
 
     private void OnCollisionEnter2D(Collision2D target)
