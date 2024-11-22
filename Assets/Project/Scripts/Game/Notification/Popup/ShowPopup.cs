@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ShowPopup : MonoBehaviour
+public class ShowPopup
 {
     private PopupBoxContainer _popupBox;
 
-    public void Show(string text)
+    public void Show(string text, PopupBoxContainer container)
     {
-        if (_popupBox == null)
-            _popupBox = FindObjectOfType<PopupBoxContainer>();
-
-        if (_popupBox == null)
-            return;
+        if(_popupBox == null)
+            _popupBox = container;
 
         _popupBox.ShowPopup(text);
     }

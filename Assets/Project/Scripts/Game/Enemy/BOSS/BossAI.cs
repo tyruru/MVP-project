@@ -13,8 +13,13 @@ public class BossAI : MonoBehaviour
 {
     [SerializeField] private float _waitTime;
 
+    public static event Action OnFightStart;
+    public static event Action OnFightEnd;
+
+
     private BossTeleport _teleport;
     private BossFireballAttack _fireballAttack;
+    private Death _death;
 
     private bool _canAttack;
     private bool _isNeedRandomAttack;
@@ -32,10 +37,15 @@ public class BossAI : MonoBehaviour
         _canAttack = true;
         IsAttack = false;
         _isNeedRandomAttack = true;
+        _death = GetComponent<Death>();
+        OnFightStart?.Invoke();
     }
 
     private void Update()
     {
+        if (_death.IsDead)
+            return;
+
         if (_canAttack && !IsAttack)
         {
             if (_isNeedRandomAttack)
@@ -63,8 +73,6 @@ public class BossAI : MonoBehaviour
         _isNeedRandomAttack = false;
         _idTemplete = BossAttackId.FireballAttack;
 
-
-        StartCoroutine(WaitBeforeAttack(_waitTime));
     }
 
     private void FireballAttack()
@@ -82,13 +90,8 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator FireballAttackCoroutine(float time, IBossExecute execute)
     {
-        for(int i = 0; i < 3; i++)
-        {
             yield return new WaitForSecondsRealtime(time);
             execute.Execute();
-        }
-
-        StartCoroutine(WaitBeforeAttack(_waitTime));
     }
 
 
@@ -101,5 +104,12 @@ public class BossAI : MonoBehaviour
     public void EndAttack()
     {
         IsAttack = false;
+        StartCoroutine(WaitBeforeAttack(_waitTime));
+    }
+
+    private void FightEnd()
+    {
+        OnFightEnd.Invoke();
+
     }
 }

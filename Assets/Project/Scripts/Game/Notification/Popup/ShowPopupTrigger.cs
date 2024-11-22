@@ -16,7 +16,7 @@ public class ShowPopupTrigger : MonoBehaviour
 
     private void Show()
     {
-        _showPopup.Show(_text);
+        _showPopup.Show(_text, FindObjectOfType<PopupBoxContainer>());
     }
 
     private void Close()
@@ -24,11 +24,11 @@ public class ShowPopupTrigger : MonoBehaviour
         _showPopup.Close();
     }
 
-    //private void OnTriggerEnter2D(Collider2D target)
-    //{
-    //    if (target.tag == "Player")
-    //        _triggerEnter = true;
-    //}
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.tag == "Player")
+            Show();
+    }
 
     private void OnTriggerExit2D(Collider2D target)
     {
@@ -38,22 +38,22 @@ public class ShowPopupTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D target)
-    {
-        if (target.tag == "Player")
-        {
-            Show();
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D target)
+    //{
+    //    if (target.tag == "Player")
+    //    {
+    //        Show();
+    //    }
+    //}
 
 
     //private void Update()
     //{
     //    if (_triggerEnter)
-
+    //        Show();
     //    else
     //        Close();
     //}
 
- 
+
 }

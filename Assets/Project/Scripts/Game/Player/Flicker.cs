@@ -13,7 +13,7 @@ public class Flicker : MonoBehaviour
 
     private void Awake()
     { 
-        _healthPresenter = transform.parent.GetComponentInChildren<PlayerHealthPresenter>();
+        _healthPresenter = transform.parent.GetComponentInChildren<HealthPresenter>();
         _sprite = transform.parent.GetComponent<SpriteRenderer>();
         _flick = _sprite.DOFade(0, _duration).SetLoops(-1, LoopType.Yoyo);
     }

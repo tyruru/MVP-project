@@ -12,6 +12,9 @@ TagManager:
   - TeleportPoint
   - Platform
   - DeadMenu
+  - BoundCollider
+  - AttackPoint
+  - Fireball
   layers:
   - Default
   - TransparentFX

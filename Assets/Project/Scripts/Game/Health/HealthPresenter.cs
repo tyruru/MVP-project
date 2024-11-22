@@ -66,7 +66,8 @@ public class HealthPresenter : MonoBehaviour
 
             else
             {
-                _knockBack.DoKnockBack(enemy, _knockBackDuration, _knockBackForce);
+                if(_knockBack != null)
+                    _knockBack.DoKnockBack(enemy, _knockBackDuration, _knockBackForce);
                 IsDamage = true;
             }
         }

@@ -6,7 +6,7 @@ public class BossFireball : MonoBehaviour
 
     [SerializeField] private ParticleSystem _partical;
     [SerializeField] private float _speed;
-
+    [SerializeField] private LayerMask _destroyLayer;
 
     private Transform _playerTransform;
 
@@ -27,10 +27,17 @@ public class BossFireball : MonoBehaviour
         _partical.Play();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D target)
     {
-        if (collision.transform.CompareTag("Platform"))
-            return;
-        Destroy(gameObject);
+        if(target.CompareTag("Player"))
+        {
+            target.GetComponent<HealthView>().TakeDamage(1, transform.position);
+            Destroy(gameObject);
+        }
+
+        if (((1 << target.gameObject.layer) & _destroyLayer) != 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

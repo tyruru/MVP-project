@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3bc9d315db0245f2a6292ed2238f083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 2.4
-  _height: 2.4
+  _width: 1.46
+  _height: 2.2
   _debugColor: {r: 1, g: 0.8726306, b: 0, a: 1}
   _pos: {x: 0, y: 0}
   _targetTag: Interactable
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 3529406954790421263}
   m_Layer: 0
   m_Name: AttackPoint
-  m_TagString: Untagged
+  m_TagString: AttackPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,6 +436,8 @@ GameObject:
   - component: {fileID: 3529406955494612000}
   - component: {fileID: 3529406955494612179}
   - component: {fileID: 7004422660899380976}
+  - component: {fileID: 7673055559323069446}
+  - component: {fileID: 8445861869520865926}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -503,7 +505,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1009833359, guid: 7c6e28665ee944702b665f17eb652d30, type: 3}
+  m_Sprite: {fileID: 494582714, guid: 7a09d340315be4b609c3360814dd2f9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -527,8 +529,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.048069358, y: -0.04235792}
-  m_Size: {x: 1.1089242, y: 2.0919342}
+  m_Offset: {x: 0, y: -0.01}
+  m_Size: {x: 1.08, y: 2.1}
   m_Direction: 0
 --- !u!50 &3529406956566149604
 Rigidbody2D:
@@ -597,7 +599,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _collisionRadius: 0.3
-  _bottomPosition: {x: 0.05, y: -0.86}
+  _bottomPosition: {x: 0, y: -0.84}
   _debugCollisionColor: {r: 0.17938554, g: 1, b: 0, a: 1}
   IsStanding: 0
 --- !u!95 &3529406955494611976
@@ -662,3 +664,53 @@ MonoBehaviour:
   _targets:
   - Enemy
   - Obstacle
+--- !u!68 &7673055559323069446
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529406956566149627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 17ba7b196035343cc8e5f5c8c8e1f439, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.45096397, y: 0.90302306}
+  - {x: 0.57479286, y: 0.5747422}
+  - {x: 0.57124805, y: -0.6271355}
+  - {x: 0.4504881, y: -0.88719046}
+  - {x: 0.32862377, y: -0.9355059}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &8445861869520865926
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529406956566149627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 17ba7b196035343cc8e5f5c8c8e1f439, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.34161568, y: -0.9095198}
+  - {x: -0.4695797, y: -0.8493453}
+  - {x: -0.5762234, y: -0.5879065}
+  - {x: -0.56198883, y: 0.6201141}
+  - {x: -0.4119854, y: 0.903023}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

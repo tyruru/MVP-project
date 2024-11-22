@@ -381,8 +381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63be7f66fa844f8881e1f5d4b278227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _runTime: 3
-  _speedMultipier: 2
+  _runTime: 2
+  _speedMultipier: 1.4
   _moveForward: {fileID: 6861740445372335466}
   _findPlayer: {fileID: 6861740445372335461}
 --- !u!114 &6861740445372335461

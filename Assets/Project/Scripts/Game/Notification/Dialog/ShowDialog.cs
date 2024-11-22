@@ -1,19 +1,16 @@
 using System;
 using UnityEngine;
 
-public class ShowDialog : MonoBehaviour
+public class ShowDialog
 {
     private DialogBoxContainer _dialogBox;
 
     public event Action OnDialogEnd;
 
-    public void Show(TextData data)
+    public void Show(TextData data, DialogBoxContainer container)
     {
-        if (_dialogBox == null)
-            _dialogBox = FindObjectOfType<DialogBoxContainer>();
-
-        if (_dialogBox == null)
-            return;
+        if(_dialogBox == null)
+            _dialogBox = container;
 
         _dialogBox.ShowDialog(data);
         _dialogBox.OnDialogEnd += EndDialog;
