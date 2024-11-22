@@ -24,23 +24,36 @@ public class ShowPopupTrigger : MonoBehaviour
         _showPopup.Close();
     }
 
-    private void OnTriggerEnter2D(Collider2D target)
-    {
-        if (target.tag == "Player")
-            _triggerEnter = true;
-    }
+    //private void OnTriggerEnter2D(Collider2D target)
+    //{
+    //    if (target.tag == "Player")
+    //        _triggerEnter = true;
+    //}
 
     private void OnTriggerExit2D(Collider2D target)
     {
         if (target.tag == "Player")
-            _triggerEnter = false;
+        {
+            Close();
+        }
     }
 
-    private void Update()
+    private void OnTriggerStay2D(Collider2D target)
     {
-        if (_triggerEnter)
+        if (target.tag == "Player")
+        {
             Show();
-        else
-            Close();
+        }
     }
+
+
+    //private void Update()
+    //{
+    //    if (_triggerEnter)
+
+    //    else
+    //        Close();
+    //}
+
+ 
 }

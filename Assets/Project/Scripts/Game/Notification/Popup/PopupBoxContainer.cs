@@ -23,6 +23,11 @@ public class PopupBoxContainer : MonoBehaviour
 
     private Coroutine _typingRoutine;
 
+    private void Start()
+    {
+        _container.SetActive(false);
+    }
+
     public void ShowPopup(string text)
     {
         if (_dialogContainer.active)

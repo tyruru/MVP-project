@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerHealthPresenter : HealthPresenter
 {
     private PlayerDash _dash;
+    private TakeDamageEffect _damageEffect;
 
     protected override void Awake()
     {
         base.Awake();
 
         _dash = transform.parent.GetComponentInChildren<PlayerDash>();
+        _damageEffect = FindObjectOfType<TakeDamageEffect>();
     }
 
     public override void TakeDamage(int damage, Vector2 enemy)
@@ -32,6 +34,11 @@ public class PlayerHealthPresenter : HealthPresenter
             StopTime.StopForSeconds(_timeStopAfterTakeDamaage);
             StartCoroutine(InvulnerabilityCoroutine());
             _dash.RestoreDash();
+            if (_damageEffect != null)
+            {
+                _damageEffect.TriggerDamageEffect();
+                Debug.Log("TriggerDamage");
+            }
         }
 
     }

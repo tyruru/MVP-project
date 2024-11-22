@@ -6,6 +6,7 @@ public class AttackPoint : MonoBehaviour
 {
     [SerializeField] private float _timeStopAfterHit;
 
+    private int damage = 1;
     private KnockBack _knockBack;
 
     public float knockBackForce;
@@ -29,6 +30,7 @@ public class AttackPoint : MonoBehaviour
         if (_targetTags.Contains(target.tag))
         {
             _knockBack.DoKnockBack(target.transform.position, knockBackDuration, knockBackForce);
+            target.GetComponent<HealthView>().TakeDamage(damage, transform.position);
             StopTime.StopForSeconds(_timeStopAfterHit);
         }
     }

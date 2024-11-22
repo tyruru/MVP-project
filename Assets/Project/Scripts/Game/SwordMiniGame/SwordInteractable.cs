@@ -6,11 +6,19 @@ public class SwordInteractable : MonoBehaviour, IInteractable, IActivityScenesEd
 {
     [SerializeField] private string _sceneName;
 
+    private bool _isGameActive;
     private AbstractToggler<PlayerInput> _toggler;
 
     private void Start()
     {
         _toggler = FindObjectOfType<PlayerInputToggler>();
+        SwordGamePresenter.OnGameEnd += OnGameEnd;
+        _isGameActive = true;
+    }
+
+    private void OnGameEnd()
+    {
+        _isGameActive = false;
     }
 
     public string SceneName
@@ -21,10 +29,13 @@ public class SwordInteractable : MonoBehaviour, IInteractable, IActivityScenesEd
 
     public void Execute()
     {
-        if (IsSceneLoaded())
-            return;
+        if (_isGameActive)
+        {
+            if (IsSceneLoaded())
+                return;
 
-        SceneManager.LoadScene(_sceneName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(_sceneName, LoadSceneMode.Additive);
+        }
     }
 
     private bool IsSceneLoaded()

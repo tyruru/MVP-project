@@ -324,7 +324,6 @@ MonoBehaviour:
   knockBackDuration: 0
   _targetTags:
   - Enemy
-  - Obstacle
 --- !u!1 &3529406955444109907
 GameObject:
   m_ObjectHideFlags: 0

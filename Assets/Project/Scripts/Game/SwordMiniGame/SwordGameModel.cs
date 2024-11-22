@@ -30,11 +30,18 @@ public class SwordGameModel : MonoBehaviour
     {
         _currentLevel++;
 
-        if (_currentLevel <= _levelsData.Count)
+        if (_currentLevel < _levelsData.Count)
         {
             return _levelsData[_currentLevel];
         }
 
         return null;
+    }
+
+    public Dictionary<Transform, float> Restart()
+    {
+        _currentLevel = 1;
+
+        return _levelsData[_currentLevel];
     }
 }

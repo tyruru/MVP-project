@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6197718255562154785}
   - component: {fileID: 6197718255562154799}
   - component: {fileID: 6197718255562154798}
+  - component: {fileID: 8421383311348236531}
+  - component: {fileID: 8827901188754814814}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Interactable
@@ -115,3 +117,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &8421383311348236531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197718255562154786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4637adbe914a44c74aa3b7120006d680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: Press interact button
+--- !u!114 &8827901188754814814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197718255562154786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7df9ced1f1f048fc97cc5e35be78189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bound:
+    _sentences: []
+  _winZone: {fileID: 0}
+  _popup: {fileID: 0}

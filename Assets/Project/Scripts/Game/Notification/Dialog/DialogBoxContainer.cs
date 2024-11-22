@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System;
 
 public class DialogBoxContainer : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class DialogBoxContainer : MonoBehaviour
     private AudioSource _sfxSource;
     private Coroutine _typingRoutine;
     private AbstractToggler<PlayerInput> _playerToggler;
+    private Button _pauseButton;
+
+    public event Action OnDialogEnd;
+
+    private void Start()
+    {
+        _container.SetActive(false);
+    }
 
     public void ShowDialog(TextData data)
     {
@@ -31,6 +40,7 @@ public class DialogBoxContainer : MonoBehaviour
 
         if (_container.active == true)
             return;
+
         _data = data;
         _currentSentence = 0;
         _text.text = string.Empty;
@@ -90,6 +100,7 @@ public class DialogBoxContainer : MonoBehaviour
 
         if(isDialogCompleted)
         {
+            OnDialogEnd?.Invoke();
             HideDialogBox();
         }
         else

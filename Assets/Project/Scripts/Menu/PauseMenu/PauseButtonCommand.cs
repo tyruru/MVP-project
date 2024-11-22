@@ -6,19 +6,19 @@ public class PauseButtonCommand : ButtonCommand
 {
     [SerializeField] private GameObject _pauseMenu;
 
-    private PlayerInputToggler _toggler;
+    //private PlayerInputToggler _toggler;
 
     public override void Execute()
     {
         _pauseMenu.SetActive(true);
 
-        if (_toggler == null)
-            _toggler = FindObjectOfType<PlayerInputToggler>();
+        //if (_toggler == null)
+        //    _toggler = FindObjectOfType<PlayerInputToggler>();
 
         Time.timeScale = 0f;
 
-        if(_toggler != null)
-            _toggler.DisableObjects();
+        //if(_toggler != null)
+        //    _toggler.DisableObjects();
     }
 
     public void HideButton()

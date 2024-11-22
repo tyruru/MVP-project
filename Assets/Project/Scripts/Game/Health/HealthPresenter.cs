@@ -20,6 +20,8 @@ public class HealthPresenter : MonoBehaviour
 
     public bool IsDamage { get; protected set;}
 
+    public event Action OnDead;
+
     protected virtual void Awake()
     {
         _healthModel = new(_maxHealth, _invulnerabilityTime);
@@ -83,6 +85,7 @@ public class HealthPresenter : MonoBehaviour
     private void Dead()
     {
         _isDead = true;
+        OnDead?.Invoke();
     }
     
 }

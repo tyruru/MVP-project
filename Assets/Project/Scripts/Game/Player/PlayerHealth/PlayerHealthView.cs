@@ -22,7 +22,7 @@ public class PlayerHealthView : HealthView
 
     public override void ChangeView(float hpPercent)
     {
-        Debug.Log("View: Percent is:" + hpPercent);
+        //Debug.Log("View: Percent is:" + hpPercent);
         _hpBar.value = hpPercent;
     }
 }

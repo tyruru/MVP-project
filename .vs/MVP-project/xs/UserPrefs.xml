@@ -3,23 +3,23 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2408c4c6-824c-47d1-b645-072cc1c0c2e2" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Menu/SceneManage/LoadLevelSceneButtonCommand.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Project/Scripts/Game/SwordMiniGame/SwordGamePresenter.cs">
     <Files>
       <File FileName="Assets/Project/Scripts/Framework/Unity/Command/KeyDownCommand.cs" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="18" Column="1" />
-      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/ButtonCommand.cs" Line="11" Column="1" />
+      <File FileName="Assets/Project/Scripts/Framework/Unity/Command/MonoCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Framework/Command/ICommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/IAsyncCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/AsyncCommand/INoResponseAsyncCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Command/INoResponseCommand.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Presenter/IPresenter.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Presenter/MonoPresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" Line="66" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthPresenter.cs" Line="87" Column="23" />
       <File FileName="Assets/Project/Scripts/Game/Health/HealthModel.cs" Line="24" Column="36" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerModel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" Line="13" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/PlayerPresenter.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Player/PlayerView.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" Line="21" Column="35" />
+      <File FileName="Assets/Project/Scripts/Game/Health/HealthView.cs" Line="12" Column="6" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/AbstractBehaviour.cs" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerJump.cs" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerWalk.cs" />
@@ -28,8 +28,8 @@
       <File FileName="Assets/Project/Scripts/Game/Collision/CollisionState.cs" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/FaceDirection.cs" Line="38" Column="2" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerFall.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Managers/PlayerAnimationManager.cs" Line="40" Column="10" />
-      <File FileName="Assets/Project/Scripts/Menu/MenuButtonAnimation.cs" Line="76" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Managers/PlayerAnimationManager.cs" Line="62" Column="32" />
+      <File FileName="Assets/Project/Scripts/Menu/MenuButtonAnimation.cs" Line="29" Column="80" />
       <File FileName="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
       <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" />
       <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInputModule.cs" />
@@ -38,15 +38,15 @@
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/Attack/PlayerAttackView.cs" Line="37" Column="37" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/Attack/PlayerAttack.cs" Line="36" Column="6" />
       <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/PlayerDash.cs" Line="28" Column="73" />
-      <File FileName="Assets/Project/Scripts/Game/Enemy/FindPlayer.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Enemy/EnemyAnimationManager.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/Attack/AttackPoint.cs" Line="28" Column="6" />
+      <File FileName="Assets/Project/Scripts/Game/Enemy/FindPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Enemy/EnemyAnimationManager.cs" Line="19" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Behaviour/Attack/AttackPoint.cs" Line="33" Column="1" />
       <File FileName="Assets/Project/Scripts/Framework/Unity/Coroutine/StaticCoroutine.cs" />
       <File FileName="Assets/Project/Scripts/Framework/Unity/Interactable/IInteractable.cs" />
-      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGameView.cs" />
-      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGameModel.cs" />
-      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGamePresenter.cs" />
-      <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadSceneButtonCommand.cs" Line="8" Column="54" />
+      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGameView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGameModel.cs" Line="47" Column="2" />
+      <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordGamePresenter.cs" Line="42" Column="1" />
+      <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadSceneButtonCommand.cs" Line="17" Column="35" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/IActivityScenesEditor.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/SwordMiniGame/SwordInteractable.cs" Line="10" Column="1" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/Test/OpenSceneWithoutLoadingScreen.cs" />
@@ -54,25 +54,25 @@
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/Test/SceneControllerTest.cs" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/Test/SceneController.cs" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/Test/OpenSceneTest.cs" />
-      <File FileName="Assets/Project/Scripts/Menu/SceneManage/UnloadCurrentSceneButtonCommand.cs" Line="8" Column="40" />
+      <File FileName="Assets/Project/Scripts/Menu/SceneManage/UnloadCurrentSceneButtonCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Framework/Unity/Toggler/AbstractToggler.cs" Line="12" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Notification/Dialog/ShowDialogInteractable.cs" Line="15" Column="6" />
       <File FileName="Assets/Project/Scripts/Game/Notification/TextData.cs" Line="10" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Notification/Popup/PopupBoxContainer.cs" Line="73" Column="6" />
-      <File FileName="Assets/Project/Scripts/Game/Notification/Popup/ShowPopupTrigger.cs" Line="8" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Notification/Popup/ShowPopup.cs" Line="17" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Notification/Popup/ShowPopupTrigger.cs" Line="19" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Notification/Popup/ShowPopup.cs" Line="2" Column="34" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/Behaviour/LookForward.cs" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/Behaviour/RunForward.cs" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/EnemyAI.cs" />
       <File FileName="Assets/Project/Scripts/Camera/FollowTargetCamera.cs" />
-      <File FileName="Assets/Project/Scripts/Game/Togglers/PlayerInputToggler.cs" Line="18" Column="39" />
+      <File FileName="Assets/Project/Scripts/Game/Togglers/PlayerInputToggler.cs" Line="27" Column="6" />
       <File FileName="Assets/Project/Scenes/Experiments/AttackExperements/EnemyAttackView.cs" />
       <File FileName="Assets/Project/Scripts/Game/Notification/Dialog/DialogBoxContainer.cs" Line="39" Column="23" />
       <File FileName="Assets/Project/Scripts/Game/Notification/Dialog/ShowDialog.cs" Line="1" Column="1" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadLevelSceneButtonCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadScene.cs" Line="18" Column="6" />
-      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealthView.cs" Line="1" Column="1" />
-      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealthPresenter.cs" Line="31" Column="1" />
+      <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadScene.cs" Line="39" Column="26" />
+      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealthView.cs" Line="25" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Health/PlayerHealthPresenter.cs" Line="26" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/BossTeleport.cs" Line="26" Column="43" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/IBossExecute.cs" Line="9" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/BossAI.cs" Line="44" Column="41" />
@@ -81,11 +81,16 @@
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/BossFaceDirection.cs" Line="7" Column="5" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/BossFireballAttack.cs" Line="9" Column="1" />
       <File FileName="Assets/Project/Scripts/Game/Enemy/BOSS/BossFireball.cs" Line="39" Column="2" />
-      <File FileName="Assets/Project/Scripts/Game/Mechanics/FindTarget.cs" Line="28" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Mechanics/FindTarget.cs" Line="28" Column="75" />
       <File FileName="Assets/Project/ArtWork/Environment/Location/Font.txt" Line="2" Column="1" />
-      <File FileName="Assets/Project/Scripts/Menu/PauseMenu/PauseButtonCommand.cs" Line="25" Column="6" />
+      <File FileName="Assets/Project/Scripts/Menu/PauseMenu/PauseButtonCommand.cs" Line="13" Column="1" />
       <File FileName="Assets/Project/Scripts/Menu/PauseMenu/ResumeButtonCommand.cs" Line="20" Column="1" />
       <File FileName="Assets/Project/Scripts/Menu/SceneManage/LoadLevelSceneTrigger.cs" Line="16" Column="1" />
+      <File FileName="Assets/Project/Scripts/Menu/SceneManage/CurrentScene/ReloadCurrentSceneButtonCommand.cs" Line="10" Column="28" />
+      <File FileName="Assets/Project/Scripts/Menu/DeadMenu/DeadMenu.cs" Line="14" Column="1" />
+      <File FileName="Assets/Project/Scripts/Game/Player/Flicker.cs" Line="21" Column="26" />
+      <File FileName="Assets/Project/Scripts/Game/Mechanics/TakeDamageEffect.cs" Line="8" Column="30" />
+      <File FileName="Assets/Project/Scripts/Game/Enemy/Behaviour/Death.cs" Line="15" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -94,8 +99,39 @@
             <Node name="Assets" expanded="True">
               <Node name="Project" expanded="True">
                 <Node name="Scripts" expanded="True">
+                  <Node name="Framework" expanded="True">
+                    <Node name="Unity" expanded="True">
+                      <Node name="Command" expanded="True" />
+                      <Node name="Toggler" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="Game" expanded="True">
+                    <Node name="Enemy" expanded="True">
+                      <Node name="Behaviour" expanded="True" />
+                    </Node>
+                    <Node name="Health" expanded="True" />
+                    <Node name="Mechanics" expanded="True" />
+                    <Node name="Notification" expanded="True">
+                      <Node name="Popup" expanded="True" />
+                    </Node>
+                    <Node name="Player" expanded="True">
+                      <Node name="Behaviour" expanded="True">
+                        <Node name="Attack" expanded="True" />
+                      </Node>
+                      <Node name="Managers" expanded="True" />
+                      <Node name="PlayerHealth" expanded="True" />
+                    </Node>
+                    <Node name="SwordMiniGame" expanded="True">
+                      <Node name="SwordGamePresenter.cs" selected="True" />
+                    </Node>
+                    <Node name="Togglers" expanded="True" />
+                  </Node>
                   <Node name="Menu" expanded="True">
-                    <Node name="SceneManage" expanded="True" />
+                    <Node name="DeadMenu" expanded="True" />
+                    <Node name="PauseMenu" expanded="True" />
+                    <Node name="SceneManage" expanded="True">
+                      <Node name="CurrentScene" expanded="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
@@ -106,6 +142,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/denis/Unity/MVP-project/Assets/Project/Scripts/Game/Notification/Popup/ShowPopupTrigger.cs" relfile="Assets/Project/Scripts/Game/Notification/Popup/ShowPopupTrigger.cs" line="42" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

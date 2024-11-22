@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class ShowDialog : MonoBehaviour
 {
     private DialogBoxContainer _dialogBox;
+
+    public event Action OnDialogEnd;
 
     public void Show(TextData data)
     {
@@ -15,6 +16,7 @@ public class ShowDialog : MonoBehaviour
             return;
 
         _dialogBox.ShowDialog(data);
+        _dialogBox.OnDialogEnd += EndDialog;
     }
 
     public void Close()
@@ -23,5 +25,10 @@ public class ShowDialog : MonoBehaviour
             return;
 
         _dialogBox.CloseDialog();
+    }
+
+    private void EndDialog()
+    {
+        OnDialogEnd?.Invoke();
     }
 }

@@ -25,6 +25,9 @@ public class FaceDirection : AbstractBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0f)
+            return;
+
         _velX = _moveAction.ReadValue<float>();
 
         if (_velX == 1)

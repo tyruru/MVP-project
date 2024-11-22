@@ -25,7 +25,7 @@ public abstract class FindTarget : MonoBehaviour
         if (targets.Count == 0)
             CurrentTarget = null;
 
-        Debug.Log($"current target \"{_targetTag}\": " + CurrentTarget);
+        //Debug.Log($"current target \"{_targetTag}\": " + CurrentTarget);
     }
 
     protected List<Collider2D> FindAllTargets()

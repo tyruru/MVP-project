@@ -16,6 +16,9 @@ public class PlayerInteract : AbstractBehaviour
     {
         if(_findInteractable.CurrentTarget != null)
         {
+            if (Time.timeScale == 0f)
+                return;
+
             if(_interactInput.ReadValue<float>() == 1)
             {
                 _findInteractable.CurrentTarget.GetComponent<IInteractable>().Execute();

@@ -57,12 +57,13 @@ public class PlayerAnimationManager : MonoBehaviour
         //fall
         if (_playerFall.IsFall && !_collisionState.IsStanding)
             ChangeAnimState(4);
-        //attack
-        if (_playerAttack.IsAttack)
-            ChangeAnimState(_playerAttack.attackId);
         //dash
         if (_playerDash.IsDash)
             ChangeAnimState(4);
+        //attack
+        if (_playerAttack.IsAttack)
+            ChangeAnimState(_playerAttack.attackId);
+     
       
         
     }

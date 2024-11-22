@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.SceneManagement;
 
 public class SwordGamePresenter : MonoBehaviour
 {
     [SerializeField] private SwordGameView _view;
     [SerializeField] SwordGameModel _model;
+
+    public static event Action OnGameEnd;
+
+    private bool _winGame = false;
 
     private void Start()
     {
@@ -24,10 +28,18 @@ public class SwordGamePresenter : MonoBehaviour
 
     private void GameResult(bool isWin)
     {
-        if (isWin)
-            NextLevel();
+        if (!_winGame)
+        {
+            if (isWin)
+                NextLevel();
+            else
+                Lose();
+        }
         else
-            Lose();
+        {
+            SceneManager.UnloadScene(gameObject.scene.name);
+            OnGameEnd?.Invoke();
+        }
     }
 
     private void NextLevel()
@@ -42,12 +54,14 @@ public class SwordGamePresenter : MonoBehaviour
 
     private void Lose()
     {
-        Debug.Log("Miss");
+        var level = _model.Restart();
+
+        _view.ChangeLevelView(level);
     }
 
     private void Win()
     {
-        Debug.Log("Win");
+        _winGame = true;
     }
 }
 

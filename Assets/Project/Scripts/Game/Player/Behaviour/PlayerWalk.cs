@@ -19,6 +19,9 @@ public class PlayerWalk : AbstractBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+            return;
+
          velX = _moveAction.ReadValue<float>() * _speed;
 
         _body2D.velocity = new Vector2(velX, _body2D.velocity.y);
