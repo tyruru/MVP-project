@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class EnemyAnimationManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator _animator;
+    private Death _death;
+
+    private void Start()
     {
-        
+        _animator = GetComponent<Animator>();
+        _death = GetComponent<Death>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (_death.IsDead)
+            ChangeAnimState(-1);
+    }
+
+    private void ChangeAnimState(int value)
+    {
+        _animator.SetInteger("AnimState", value);
     }
 }

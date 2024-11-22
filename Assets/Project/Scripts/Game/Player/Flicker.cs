@@ -20,6 +20,9 @@ public class Flicker : MonoBehaviour
 
     private void Update()
     {
+        if (_sprite == null)
+            return;
+
         if (!_healthPresenter.CanTakeDamage)
         {
             _flick.Play();

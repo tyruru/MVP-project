@@ -22,7 +22,10 @@ public class ShowDialogAfterGame : MonoBehaviour
         _showDialog = new();
         _showDialog.OnDialogEnd += ShowEndZone;
         _showDialog.Show(_bound, FindObjectOfType<DialogBoxContainer>());
-        _popup.enabled = false;
+
+        if(_popup != null)
+            _popup.enabled = false;
+
     }
 
     private void ShowEndZone()
