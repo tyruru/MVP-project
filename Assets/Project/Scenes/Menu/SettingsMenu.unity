@@ -891,6 +891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4942266792215976404, guid: e93835e52add54796a6c49c55d43894d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4942266792215976407, guid: e93835e52add54796a6c49c55d43894d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

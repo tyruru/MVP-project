@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runTime: 2
-  _speedMultipier: 1.4
+  _speedMultipier: 1.6
   _moveForward: {fileID: 6861740445372335466}
   _findPlayer: {fileID: 6861740445372335461}
 --- !u!114 &6861740445372335461

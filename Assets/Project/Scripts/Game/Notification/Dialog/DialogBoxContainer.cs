@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 using System;
 
 public class DialogBoxContainer : MonoBehaviour
 {
-    [SerializeField] private Text _text;
+    [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private GameObject _container;
     //[SerializeField] private Animator _animator;
+
+    
 
     [Space]
     [SerializeField] private float _textSpeed = 0.09f;

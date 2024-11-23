@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using System;
 
 public class PlayerJump : AbstractBehaviour
 {
@@ -20,6 +20,7 @@ public class PlayerJump : AbstractBehaviour
     [HideInInspector] public bool IsJumping;
     [HideInInspector] public bool IsFullJump;
 
+    public static event Action OnJump;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class PlayerJump : AbstractBehaviour
         // Press Button
         if (_jumpAction.ReadValue<float>() == 1 && _currentJumpCount > 0)
         {
-            OnJump();
+            Jump();
             _currentJumpTime = 0f;
             IsJumping = true;
             _currentJumpCount--;
@@ -79,9 +80,15 @@ public class PlayerJump : AbstractBehaviour
         }
     }
 
-    private void OnJump()
+    private void Jump()
     {
         float velx = _body2D.velocity.x;
         _body2D.velocity = new Vector2(velx, _jumpSpeed);
+        JumpSound();
+    }
+
+    private void JumpSound()
+    {
+        OnJump?.Invoke();
     }
 }

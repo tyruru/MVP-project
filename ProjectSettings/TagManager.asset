@@ -15,6 +15,7 @@ TagManager:
   - BoundCollider
   - AttackPoint
   - Fireball
+  - Music
   layers:
   - Default
   - TransparentFX
