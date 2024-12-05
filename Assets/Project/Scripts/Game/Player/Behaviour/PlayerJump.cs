@@ -20,38 +20,46 @@ public class PlayerJump : AbstractBehaviour
     [HideInInspector] public bool IsJumping;
     [HideInInspector] public bool IsFullJump;
 
+    private bool _canJump;
+    private bool _flag;
+
     public static event Action OnJump;
 
     void Start()
     {
         _jumpAction = _playerInput.actions.FindAction("Jump");
         _vecGravity = new Vector2(0, -Physics.gravity.y);
+        _flag = false;
     }
 
     private void Update()
     {
         // Если приземлились
-        if (_collisionState.IsStanding)
+        if (_collisionState.IsStanding && !_flag)
         {
             IsFullJump = false;
             IsJumping = false;
             _currentJumpCount = _jumpCount;
         }
 
+        // Button up
+        if (_jumpAction.ReadValue<float>() == 0)
+        {
+            IsJumping = false;
+            _canJump = true;
+        }
+
         // Press Button
-        if (_jumpAction.ReadValue<float>() == 1 && _currentJumpCount > 0)
+        if (_jumpAction.ReadValue<float>() == 1 && _currentJumpCount > 0 && _canJump)
         {
             Jump();
             _currentJumpTime = 0f;
             IsJumping = true;
+            _canJump = false;
             _currentJumpCount--;
         }
 
-        // Button up
-        if (_jumpAction.ReadValue<float>() == 0)
-            IsJumping = false;
-
-        if (!IsJumping || IsFullJump)
+        if (_canJump || IsFullJump)
         {
             // Резкая остановка прыжка
             if (_body2D.velocity.y > 0 && !IsFullJump)
@@ -85,10 +93,19 @@ public class PlayerJump : AbstractBehaviour
         float velx = _body2D.velocity.x;
         _body2D.velocity = new Vector2(velx, _jumpSpeed);
         JumpSound();
+        StartCoroutine(WaitAfterJump());
     }
 
     private void JumpSound()
     {
         OnJump?.Invoke();
     }
+
+    private IEnumerator WaitAfterJump()
+    {
+        _flag = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        _flag = false;
+    }
+
 }

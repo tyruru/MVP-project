@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6396a9f499faa47fbb859cc0ac583a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpTime: 0.6
-  _jumpSpeed: 10
+  _jumpTime: 0.25
+  _jumpSpeed: 18
   _jumpMultilpier: 2
   _jumpCount: 1
   _fullJumpSmooth: 0.7
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0351ecde280446ab0c3ff872a89ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fallMultiplier: 3
+  _fallMultiplier: 4
   _fallSmooth: 1.8
   IsFall: 0
 --- !u!114 &3529406954789515304
@@ -597,9 +597,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collisionLayer:
     serializedVersion: 2
-    m_Bits: 256
-  _collisionRadius: 0.3
-  _bottomPosition: {x: 0, y: -0.84}
+    m_Bits: 768
+  _collisionRadius: 0.46
+  _bottomPosition: {x: 0, y: -0.615}
   _debugCollisionColor: {r: 0.17938554, g: 1, b: 0, a: 1}
   IsStanding: 0
 --- !u!95 &3529406955494611976

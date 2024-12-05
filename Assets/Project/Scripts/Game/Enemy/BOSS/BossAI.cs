@@ -77,7 +77,8 @@ public class BossAI : MonoBehaviour
 
     private void FireballAttack()
     {
-        StartCoroutine(FireballAttackCoroutine(1, _fireballAttack));
+        //StartCoroutine(FireballAttackCoroutine(1, _fireballAttack));
+        _fireballAttack.Execute();
         _isNeedRandomAttack = false;
         _idTemplete = BossAttackId.Teleport;
     }
@@ -87,13 +88,6 @@ public class BossAI : MonoBehaviour
         yield return new WaitForSecondsRealtime(time);
         _canAttack = true;
     }
-
-    private IEnumerator FireballAttackCoroutine(float time, IBossExecute execute)
-    {
-            yield return new WaitForSecondsRealtime(time);
-            execute.Execute();
-    }
-
 
     public void StartAttack()
     {

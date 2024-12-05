@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _partical: {fileID: 8596578810634710971}
-  _speed: 5
+  _speed: 15
   _destroyLayer:
     serializedVersion: 2
     m_Bits: 256
